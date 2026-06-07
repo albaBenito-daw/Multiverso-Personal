@@ -1,0 +1,870 @@
+/*
+	Desarrollado por
+	
+	Alba Benito Aliste
+	
+	alba_benali@hotmail.com
+*/
+/*Todo el código CSS aparece indentado para que el trabajo y la búsqueda de elementos sea mas sencillo*/
+body{
+	background-color:#fedde4;
+	margin:0;
+	opacity:0;
+	transition:opacity 0.2s ease-in-out;
+}
+.noscroll{
+	overflow:hidden !important;
+}
+.cuerpo{
+	position:relative;
+	height:100vh;
+	min-height:600px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+.cuerpo.subpagina{
+	height:auto;
+	min-height:100vh;
+}
+	.rivete{
+		position:relative;
+		display:block;
+		height: 30px;
+		background-repeat: repeat-x;
+		background-size: auto 100%;
+		background-position:center center;
+	}
+	.rivete.sup{
+		background-image: url('../img/imgButtonSeilPartHeader_22x30.png');
+	}
+	.rivete.inf{
+		background-image: url('../img/imgButtonSeilPartFooter_22x30.png');
+	}
+	.cuerpoCentral{
+		
+	}
+		.titulo{
+			display:block;
+			max-width:800px;
+			width:100%;
+			margin: 0 auto;
+			padding: 1px 30px 1px 30px;
+			box-sizing:border-box;
+		}
+			.titulo > h1{
+				position:relative;
+				text-align:center;
+				font-family:"Gloria Hallelujah", cursive;
+				font-size:65px;
+				color:#f0729d;
+				margin:0px 0px 40px 0px;
+				padding:5px 10px;	
+				white-space:nowrap;
+				text-shadow:1px 1px 3px rgba(0,0,0,0.4);
+				line-height:50px;
+			}
+				h1 > span{
+					font-size:36px;
+				}
+			.titulo > h1:before{
+				content:"";
+				position:absolute;
+				width:80px;
+				height:80px;
+				left:2px;
+				top:-58px;
+				background-image:url('../img/corazones_80x80.png');
+				background-size:contain;
+			}
+		#buttonsCont{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: center;
+			max-width:1200px;
+			width:100%;
+			position:relative;
+			margin: 0 auto;
+			gap:30px;
+			padding-bottom:50px;
+		}	
+			#buttonsCont > button{
+				width:calc(100% / 4 - 40px);
+				border-radius: 50%;
+				aspect-ratio:1/1;
+				background:url('../img/imgButtonSeilBg246x246.png');
+				background-size:contain;
+				background-position:center center;
+				background-repeat:no-repeat;
+				border: none;
+				cursor: pointer;
+				display: flex;
+				flex-direction: column; /* Imagen arriba, texto abajo */
+				align-items: center;
+				justify-content: center;
+				gap: 4px; /* Espacio entre imagen y texto */
+				padding: 8px 36px 24px 36px;
+				overflow: hidden; /*Centra horizontalmente el texto dentro del botón*/
+				text-align: center;
+				transition:transform .2s ease-in-out, filter .2s ease-in-out;
+				filter:drop-shadow(0px 0px 2px rgba(0,0,0,0.5));
+				-webkit-tap-highlight-color:transparent; /*cambia el color de resaltado*/
+			}
+			#buttonsCont > button:hover{
+				transform:scale(1.075);
+				filter:drop-shadow(6px 6px 6px rgba(0,0,0,0.5));
+			}
+				#buttonsCont > button > img{
+					width:100%;
+					max-width:120px;
+				}
+				#buttonsCont > button > span{
+					font-family:"Gloria Hallelujah", cursive;
+					font-size:23px;
+					font-weight: 600;
+					color: #f0729d;
+				}
+	.cuerpoSubpagina{
+		min-height: calc(100% - 60px);
+		padding-bottom:50px;
+	}
+		.tituloSubpagina{
+			position:relative;
+			display:block;
+			max-width:800px;
+			width:100%;
+			margin: 0 auto;
+			padding: 50px 15px 1px 15px;
+			box-sizing:border-box;
+		}
+			.tituloSubpagina > h1{
+				text-align:center;
+				font-family:"Gloria Hallelujah", cursive;
+				font-size:38px;
+				color:#f0729d;
+				margin:0px 0px 40px 0px;
+				padding:5px 10px;	
+				white-space:nowrap;
+				text-shadow:1px 1px 3px rgba(0,0,0,0.4);
+				line-height:50px;
+			}
+		#botonCasa{
+			position:absolute;
+			display:block;
+			width:30px;
+			height:30px;
+			top:40px;
+			left:10px;
+			background-color:#f0729d;
+			cursor:pointer;
+			border:none;
+			transition:all .2s ease-in-out;
+			mask:url(../img/home.svg);
+		}
+		#botonCasa:hover{
+			transform:scale(1.1);
+		}
+		.botonMas{
+			position:absolute;
+			display:block;
+			width:30px;
+			height:30px;
+			top:40px;
+			right:10px;
+			background-color:#f0729d;
+			cursor:pointer;
+			border:none;
+			transition:all .2s ease-in-out;
+			mask:url(../img/botonMas.svg);
+		}
+		.botonMas:hover{
+			transform:scale(1.1);
+		}	
+		#botonDcha{
+			position:absolute;
+			display:block;
+			width:30px;
+			height:30px;
+			top:70px;
+			right:100px;
+			background-color:#f0729d;
+			cursor:pointer;
+			border:none;
+			transition:all .2s ease-in-out;
+			mask:url(../img/botonDcha.svg?v=0);
+		}
+		#botonDcha:hover{
+			transform:scale(1.1);
+		}
+		#botonIzq{
+			position:absolute;
+			display:block;
+			width:30px;
+			height:30px;
+			top:70px;
+			left:100px;
+			background-color:#f0729d;
+			cursor:pointer;
+			border:none;
+			transition:all .2s ease-in-out;
+			mask:url(../img/botonIzq.svg);
+		}
+		#botonIzq:hover{
+			transform:scale(1.1);
+		}
+	.contenidoSubpagina{
+		width: 100%;
+		max-width: 390px;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		box-sizing:border-box;
+	}
+	.contenidoSubpagina.grande{
+		max-width: 600px;
+	}
+	.contenidoSubpagina.anchoCompleto{
+		max-width:100%;
+		padding:0 5px 20px 5px;
+	}
+		.contenidoSubpagina > input{
+			width:100%;
+			margin: 0 auto;
+			box-sizing:border-box;
+		}
+		.contenidoSubpagina .vacio{
+			color:#f0729d;
+			font-family:'Nunito',sans-serif;
+			margin:0 auto;
+		}
+	.botonesAjustes{
+		width: 100%;
+		max-width: 390px;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		box-sizing:border-box;
+	}
+		.botonesAjustes > button{
+			width:100% !important;
+		}
+	/*Estilos del calendario*/
+	#calendario{
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+		justify-content: flex-start;
+		gap:1px;
+		border-radius:20px;
+		padding:0;
+		margin:0 auto;
+		width:calc(100% - 30px);
+		overflow:hidden;
+	}
+		#calendario .diaCalendario{
+			display:flex;
+			flex-direction:column;
+			width:calc(100% / 7 - 1px);
+			height:62px;
+			background-color:#ffffff;
+			cursor:pointer
+		}
+		#calendario .diaCalendario.titulo{
+			height:26px;
+			padding:0;
+		}
+		#calendario .diaCalendario:hover{
+			background-color:#fef8f9;
+		}
+		#calendario .diaCalendario.noSeleccionable:hover{
+			background-color:#ffffff;
+			cursor:default;
+		}
+		#calendario .diaCalendario.titulo:hover{
+			background-color:#ffffff;
+			cursor:default;
+		}
+		#calendario .diaCalendario.actual{
+			background-color:#f8bed2;
+		}
+		#calendario .diaCalendario.seleccionado{
+			background-color:#eaeed7;
+		}
+			#calendario .diaCalendario .diaNumero{
+				padding:6px 6px 0 6px;
+				font-family:"Gloria Hallelujah", cursive;
+				color:#f0729d;
+				font-size:16px;
+				line-height:16px;
+				height:22px;
+				flex-shrink:0;
+				flex-grow:0;
+				box-sizing:border-box;
+			}
+			#calendario .diaCalendario.titulo .diaNumero{
+				width:100%;
+				overflow:hidden;
+				text-overflow:ellipsis;
+			}
+			#calendario .diaCalendario .diaEventos{
+				display:flex;
+				flex-direction:column;
+				padding:6px 6px 6px 6px;
+				height:calc(100% - 22px);
+				flex-shrink:0;
+				flex-grow:0;
+				box-sizing:border-box;
+				gap:2px;
+			}
+				#calendario .diaCalendario .diaEventos .evento{
+					width:100%;
+					height:calc(100% / 5);
+					border-radius:3px;
+				}
+				#calendario .diaCalendario .diaEventos .evento.rosaOscuro{
+					background-color:#f0729d;
+				}
+				#calendario .diaCalendario .diaEventos .evento.rosaClaro{
+					background-color:#fcaebf;
+				}
+				#calendario .diaCalendario .diaEventos .evento.verdeOscuro{
+					background-color:#a7b750;
+				}
+				#calendario .diaCalendario .diaEventos .evento.verdeClaro{
+					background-color:#d0d8a2;
+				}
+				#calendario .diaCalendario .diaEventos .evento.gris{
+					background-color:#919191;
+				}
+	#cuerpoEventos{
+		display:flex;
+		flex-direction:column;
+		padding:10px 0 0 0;
+		margin:0 auto;
+		width:calc(100% - 30px);
+		gap:0;
+	}
+		.filaEvento {
+			position:relative;
+			width:100%;
+			display:flex;
+			padding:15px 0;
+			color:#f0729d;
+			border-bottom:solid #f0729d 1px;
+			height:68px;
+			box-sizing:border-box;
+			font-family:'Nunito',sans-serif;
+			cursor:pointer;
+		}
+		.filaEvento:hover{
+			background-color:#fdd8e0;
+		}
+		.filaEvento.vacio{
+			cursor:default;
+			background-color:transparent;
+		}
+			.horaEvento {
+				position:relative;
+				font-weight:800;
+				font-size:18px;
+				width:56px;
+				text-align:left;
+				flex-shrink:0;
+				flex-grow:0;
+			}
+			.rayaEvento {
+				width:4px;
+				height:100%;
+				flex-shrink:0;
+				flex-grow:0;
+			}
+				.rayaEvento > span{
+					display:block;
+					width:100%;
+					height:100%;
+					border-radius:2px;
+					background-color:blue;
+				}
+				.rayaEvento > span.rosaOscuro{
+					background-color:#f0729d;
+				}
+				.rayaEvento > span.rosaClaro{
+					background-color:#fcaebf;
+				}
+				.rayaEvento > span.verdeOscuro{
+					background-color:#a7b750;
+				}
+				.rayaEvento > span.verdeClaro{
+					background-color:#d0d8a2;
+				}
+				.rayaEvento > span.gris{
+					background-color:#919191;
+				}
+			.infoEvento {
+				display:flex;
+				flex-direction:column;
+				width:calc(100% - 60px);
+				padding-left:8px;
+				box-sizing:border-box;
+			}
+				.tituloEvento{
+					position:relative;
+					white-space:nowrap;
+					text-overflow:ellipsis;
+					overflow:hidden;
+					font-size:16px;
+					font-weight:800;
+					padding-right:24px;
+				}
+					.tituloEvento > button{
+						position:absolute;
+						display:flex;
+						justify-content:center;
+						align-items:center;
+						top:0px;
+						right:0px;
+						width:18px;
+						height:18px;
+						border:0;
+						background-color:#f0729d;
+						border-radius:4px;
+						-webkit-appearance:none;
+						color:#ffffff;
+						cursor:pointer;
+						font-size:10px;
+					}
+					.tituloEvento > button:hover{
+						opacity:0.8;
+					}
+				.descripcionEvento{
+					white-space:nowrap;
+					text-overflow:ellipsis;
+					overflow:hidden;
+					font-size:14px;
+				}
+	#cuerpoArmario{
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+		gap:0;
+		align-items:stretch;
+		justify-content:start;
+	}
+		.contenedorImagen{
+			position:relative;
+			width:calc(100% / 6);
+			height:150px;
+			padding:5px;
+			box-sizing:border-box;
+		}
+			.contenedorImagen > img{
+				width:100%;
+				height:100%;
+				object-fit:cover;
+				cursor:pointer;
+				border-radius:10px;
+				box-shadow:2px 2px 1px rgba(240,114,157,0.5);
+				transition:transform .2s ease-in-out;
+			}
+			.contenedorImagen > img:hover{
+				transform:rotate(-2deg);
+			}
+			.borrarImagen{
+				position:absolute;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				top:0px;
+				right:0px;
+				width:18px;
+				height:18px;
+				border:0;
+				background-color:#f0729d;
+				border-radius:4px;
+				-webkit-appearance:none;
+				color:#ffffff;
+				cursor:pointer;
+				font-size:10px;
+				transition:transform .2s ease-in-out;
+			}
+			.borrarImagen:hover{
+				transform:scale(1.2) rotate(-10deg);
+			}
+	#contenedorImagenGrande{
+		position:fixed;
+		left:0px;
+		top:0px;
+		width:100%;
+		height:100%;
+		background-color:rgba(254,221,228,0.9);
+		overflow:auto;
+		display:none;
+		opacity:0;
+		transition:opacity .2s ease-in-out;
+		justify-content:center;
+		align-items:center;
+		padding:10px;
+		box-sizing:border-box;
+		z-index:2;
+	}
+		#contenedorImagenGrande > img{
+			width:100%;
+			height:100%;
+			object-fit:contain;
+		}
+		#cerrarImagenGrande{
+			position:absolute;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			top:10px;
+			right:10px;
+			width:30px;
+			height:30px;
+			border:0;
+			background-color:#f0729d;
+			border-radius:4px;
+			-webkit-appearance:none;
+			color:#ffffff;
+			cursor:pointer;
+			font-size:10px;
+		}
+	#cuerpoNotas{
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+		gap:0;
+		align-items:stretch;
+		justify-content:start;
+		gap:0;
+	}
+		.contenedorNota{
+			position:relative;
+			padding:5px;
+			width:calc(100% / 8);
+			box-sizing:border-box;
+		}
+			.infoNota{
+				width:100%;
+				height:100%;
+				background-color:#eef1dd;
+				border-radius:10px;
+				box-shadow:2px 2px 1px rgba(240,114,157,0.5);
+				font-family:"Nunito",sans-serif;
+				color:#f0729d;
+				padding:10px;
+				box-sizing:border-box;
+				cursor:pointer;
+				transition:transform .2s ease-in-out;
+			}
+			.infoNota:hover{
+				transform:rotate(-2deg);
+			}
+				.tituloNota{
+					font-size:16px;
+					font-weight:800;
+					word-break:break-word;
+					padding-bottom:10px;
+				}
+				.descripcionNota{
+					font-size:14px;
+					word-break:break-word;
+					display:-webkit-box;
+					-webkit-line-clamp:4;
+					-webkit-box-orient:vertical;
+					overflow:hidden;  
+				}
+			.borrarNota{
+				position:absolute;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				top:0px;
+				right:0px;
+				width:18px;
+				height:18px;
+				border:0;
+				background-color:#f0729d;
+				border-radius:4px;
+				-webkit-appearance:none;
+				color:#ffffff;
+				cursor:pointer;
+				font-size:10px;
+				transition:transform .2s ease-in-out;
+			}
+			.borrarNota:hover{
+				transform:scale(1.2) rotate(-10deg);
+			}
+/*Estilos de formularios flotantes*/
+.fondoFormularios{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	background-color:rgba(254,221,228,0.9);
+	overflow:auto;
+	display:none;
+	opacity:0;
+	transition:opacity .2s ease-in-out;
+	justify-content:center;
+	align-items:center;
+	padding-top:50px;
+	padding-bottom:50px;
+	box-sizing:border-box;
+	z-index:2;
+}
+.contenedorFormulario{
+    position:relative;
+    margin:auto;
+    width:100%;
+    max-width:300px;
+    height:auto;
+    padding:0;
+    background-color:#ffffff;
+    border:solid #f0729d 2px;
+    box-shadow:0 3px 3px rgba(56,65,74,0.1);
+    border-radius:1.2rem;
+    text-align:center;
+    font-family:'Nunito',sans-serif;
+    font-size:16px;
+    font-weight:normal;
+    color:#222222;
+    box-sizing:border-box;
+}
+.contenedorFormulario.alerta{
+	background-color:#eef1dd;
+	max-width:400px;
+}
+    .claseFormulario{
+        display:none;
+    }
+		.tituloFormulario{
+			padding:10px 15px 15px 15px;
+			font-family:"Gloria Hallelujah", cursive;
+			font-size:20px;
+			color:#f0729d;
+		}
+		.cuerpoFormulario{
+			display:flex;
+			flex-direction:column;
+			gap:10px;
+			padding:0 15px 15px 15px;
+		}
+			.cuerpoFormulario > input, .cuerpoFormulario > textarea{
+				padding:8px 12px;
+				border-radius:8px;
+				border:solid #f0729d 1px;
+				color:#f0729d;
+				font-size:16px;
+			}
+			.cuerpoFormulario > textarea{
+				height:200px;
+				resize:none;
+			}
+			.cuerpoFormulario > input::placeholder, .cuerpoFormulario > textarea::placeholder{
+				color:#dddddd;
+			}
+			.cuerpoFormulario > input:focus, .cuerpoFormulario > textarea:focus{
+				outline: none;        
+				border: 1px solid #df175c;
+				background-color:#eef1dd;
+			}
+			.cuerpoFormulario > p{
+				margin:0;
+			}
+			.botonesColores{
+				position:relative;
+				display:flex;
+				gap:5px;
+				justify-content:space-between;
+			}
+				.botonesColores > input{
+					position:absolute;
+					opacity:0;
+					width:0;
+				}
+				.botonesColores > label{
+					position:relative;
+					display:flex;
+					justify-content:center;
+					align-items:center;
+					width:40px;
+					height:40px;
+					background-color:silver;
+					border-radius:8px;
+					cursor:pointer;
+				}
+				.botonesColores > label:hover{
+					opacity:0.8;
+				}
+					.botonesColores > label > span{
+						width:26px;
+						height:26px;
+						mask:url('../img/check.svg');
+						mask-size:contain;
+						background-color:transparent;
+					}
+				.botonesColores > input:checked + label > span{
+					background-color:#666666;
+				}
+		.botonesFormulario{
+			padding:8px 15px 15px 15px;
+			display:flex;
+			gap:10px;
+			justify-content:center;
+		}
+			.botonesFormulario > button{
+				width:100px;
+				padding:6px 8px;
+				border-radius:8px;
+				color:#ffffff;
+				background-color:#f0729d;
+				border:none;
+				cursor:pointer;
+				transition:all .2s ease-in-out;
+			}
+			.botonesFormulario > button:hover{
+				transform:scale(1.1);
+				background-color:#f49cba;
+			}
+		.nuevaCuenta{
+			padding:0 15px 15px 15px;
+		}
+			.nuevaCuenta > span{
+				font-size: 14px;
+				color:#f0729d;
+				transition:all .2s ease-in-out;
+				cursor:pointer;
+			}
+			.nuevaCuenta > span:hover{
+				color:#f49cba;
+			}
+#contenedorCargaAjax{
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    background-color:rgba(254,221,228,0.9);
+    display:none;
+    opacity:0;
+    z-index:2;
+    transition:opacity .2s ease-in-out;
+}
+	/*Dar animación al spinner de carga*/
+    @-moz-keyframes girar { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes girar { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes girar { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    #spinnerCargaAjax{
+        position:absolute;
+        left:50%;
+        top:40%;
+        width:150px;
+        height:150px;
+        margin-left:-75px;
+        margin-top:-75px;
+        background-image:url('../img/spinnerCarga.png');
+        background-repeat:no-repeat;
+        background-size:100%;
+        font-size:40px;
+        font-weight:normal;
+        padding-top:0px;
+        text-align:center;
+        animation:girar 4s linear infinite;
+    }
+/*Ajustar los estilos al responsive según tamaños*/
+@media (min-width:1200px){
+	.contenedorImagen{
+		width:200px;
+		height:200px;
+	}
+}
+@media (max-width:1200px){
+	.contenedorNota{
+		width:calc(100% / 6);
+	}
+}
+@media (max-width:1024px){
+	.contenedorNota{
+		width:calc(100% / 4);
+	}
+}
+@media (max-width:768px){
+	#buttonsCont{
+		gap:15px;
+	}	
+	#buttonsCont > button{
+		width:calc(100% / 2 - 30px) !important;
+	}
+	#buttonsCont > button > span{
+		font-size:18px;
+	}
+	 .titulo {
+		padding: 60px 20px 20px 20px;
+		background-position: center top;
+		text-align: center;
+	}
+	.titulo h1 {
+		font-size: 48px;
+	}
+	.tituloSubpagina > h1{
+		font-size: 36px;
+	}
+	#botonDcha{
+		right:40px;
+	}
+	#botonIzq{
+		left:40px;
+	}
+	.contenedorImagen{
+		width:calc(100% / 4);
+		height:150px;
+	}
+	.contenedorNota{
+		width:calc(100% / 3);
+	}
+}
+@media (max-width:690px){
+	.tituloSubpagina > h1{
+		font-size: 28px;
+		margin:0 0 20px 0;
+	}
+}
+@media (max-width:550px){
+	.titulo h1{
+		font-size:26px;
+		margin:0 0 20px 0;
+		line-height:22px;
+	}
+	.titulo h1 > span{
+		font-size:14px;
+	}
+	h1:before{
+		width:40px;
+		height:40px;
+		left:0px;
+		top:-33px;
+	}
+	.tituloSubpagina > h1{
+		font-size: 21px;
+		margin:0 0 20px 0;
+	}
+	#botonDcha{
+		width:20px;
+		height:20px;
+		right:15px;
+	}
+	#botonIzq{
+		width:20px;
+		height:20px;
+		left:15px;
+	}
+	.contenedorImagen{
+		width:calc(100% / 2);
+		height:150px;
+	}
+	.contenedorNota{
+		width:calc(100% / 2);
+	}
+}
